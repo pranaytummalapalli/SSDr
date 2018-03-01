@@ -9,16 +9,13 @@ cap2 = cv.VideoCapture(1)
 
 if __name__ == '__main__':
     while True :
-        ret1, imgR = cap1.read()
+        _, imgR = cap1.read()
         cv.waitKey(1)
-        ret2, imgL = cap2.read()
+        _, imgL = cap2.read()
 
-        imgR = cv.resize(imgR, (0, 0), fx=0.5, fy=0.5)
+        imgR = cv.resize(imgR, (0,0), fx=0.5, fy=0.5)
         imgL = cv.resize(imgL, (0,0), fx=0.5, fy=0.5)
-        #imgL = cv.pyrDown( cv.imread('/home/kshitij/opencv-3.4.0/samples/data/aloeL.jpg') )  # downscale images for faster processing
-        #imgR = cv.pyrDown( cv.imread('/home/kshitij/opencv-3.4.0/samples/data/aloeR.jpg') )
-        #imgL = cv.pyrDown(img1)
-        #imgR = cv.pyrDown(img2)
+       
         window_size = 3
         min_disp = 16
         num_disp = 112-min_disp
