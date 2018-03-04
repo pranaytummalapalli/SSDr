@@ -4,7 +4,6 @@
 # import the necessary packages
 
 from __future__ import print_function
-from pyimagesearch.panorama import Stitcher
 from imutils.video import VideoStream
 import numpy as np
 import datetime
