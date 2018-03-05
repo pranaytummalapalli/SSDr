@@ -70,6 +70,24 @@ void axialLeft(){
   digitalWrite(in4, LOW);
 }
 
+void rsRight(){
+  analogWrite(enA, 255);
+  analogWrite(enB, 0);
+  digitalWrite(in1, LOW);
+  digitalWrite(in2, HIGH);
+  digitalWrite(in3, LOW);
+  digitalWrite(in4, LOW);
+}
+
+void rsLeft(){
+  analogWrite(enA, 0);
+  analogWrite(enB, 255);
+  digitalWrite(in1, LOW);
+  digitalWrite(in2, LOW);
+  digitalWrite(in3, LOW);
+  digitalWrite(in4, HIGH);
+}
+
 void stp(){
   digitalWrite(in1, LOW);
   digitalWrite(in2, LOW);
@@ -116,6 +134,16 @@ void loop(){
     else if(input == 5)
     {
       stp();
+    }
+    
+    else if(input == 3)
+    {
+      rsRight();
+    }
+    
+    else if(input == 1)
+    {
+      rsLeft();
     }
   }
 }
