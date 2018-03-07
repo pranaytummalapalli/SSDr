@@ -3,7 +3,7 @@ int in1 = 3;
 int in2 = 4;
 int in3 = 5;
 int in4 = 6;
-int enB = 7;
+int enB = 9;
 
 void setup(){
   pinMode(enA, OUTPUT);
@@ -98,50 +98,50 @@ void stp(){
 void loop(){
   while(Serial.available())
   {
-     int input = Serial.read();
+     char input = Serial.read();
      Serial.println(input);
      
-     if(input == 8)
+     if(input == '8')
     {
       fd();
     }
 
-    else if(input == 2)
+    else if(input == '2')
     {
       rv();
     }
 
-    else if(input == 4)
+    else if(input == '4')
     {
       axialLeft();
     }
 
-    else if(input == 6)
+    else if(input == '6')
     {
       axialRight();
     }
 
-    else if(input == 7)
+    else if(input == '7')
     {
       sLeft();
     }
 
-    else if(input == 9)
+    else if(input == '9')
     {
       sRight();
     }
    
-    else if(input == 5)
+    else if(input == '5')
     {
       stp();
     }
     
-    else if(input == 3)
+    else if(input == '3')
     {
       rsRight();
     }
     
-    else if(input == 1)
+    else if(input == '1')
     {
       rsLeft();
     }
